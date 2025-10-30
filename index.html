@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is my first dynamic web account">
+  <meta name="author" content="Hyrum Sahyl Isla Hernandez">
+  <title>WDD 131 – Dynamic Web Fundamentals - Hyrum Sahyl Isla Hernandez</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script type="module" src="scripts/getdates.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main></main>
-    
+  <header class="header-brand">
+  <h1>WDD 131: Dynamic Web Fundamentals - Hyrum S. Isla Hernandez</h1>
+
+
+<nav class="nav-tabs" aria-label="Primary">
+  <ul class="menu">
+    <li><a href="https://www.linkedin.com/in/hyrum-isla" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
+    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/24?lang=eng&id=p8#p8" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+    <li><a href="final/">Final Project</a></li>
+  </ul>
+</nav>
+</header>
+
+<main>
+  <section class="card" aria-labelledby="about-title">
+    <h2 id="about-title" class="card-title">About Me</h2>
+
+    <div class="card-body">
+      
+
+      <div class="about-text">
+        <p>My name is Hyrum and I’m really into learning new things like programming.
+        In my current job I help people with complaints and concerns about their insurance.
+        One of my personal goals is to help more people achieve their financial goals.
+        I love serving in the Church of Jesus Christ.</p>
+      </div>
+      <figure class="profile-figure">
+        <img
+          class="profile"
+          src="images/profile.jpg"
+          alt="Hyrum with his daughter"
+          width="220"
+          height="220"
+          loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+<section class="card">
+  <h2 class="card-title">Port Veracruz</h2>
+  <div class="card-body wide">
+    <img class="place-image" src="images/veracruz.jpg" alt="Port of Veracruz, Mexico" loading="lazy">
+    <div class="place-text">
+      <p>Veracruz is one of the oldest and most important ports in Mexico, located on the Gulf of Mexico. It serves as a major hub for international trade and has a rich colonial history. The port is also known for its warm hospitality, lively music, and vibrant coastal culture.</p>
+    </div>
+  </div>
+</section>
+ 
+</main>
+
+
+<aside>
+  <section class="card">
+    <div class="card-title">Web Dev Resources</div>
+    <ul class="resources">
+      <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
+      <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a></li>
+      <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS Tricks</a></li>
+      <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+      <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a></li>
+      <li><a href="https://picsum.photos/" target="_blank" rel="noopener">Image Placeholder</a></li>
+    </ul>
+  </section>
+</aside>
+
+<footer>
+  <p>&copy; <span id="currentyear"></span> Hyrum Sahyl Isla Hernandez — Veracruz, Mexico</p>
+  <p id="lastModified"></p>
+</footer>
+
 </body>
 </html>
