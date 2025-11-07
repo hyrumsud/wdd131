@@ -1,0 +1,16 @@
+@media (min-width: 700px){
+  .site-header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  main h1{
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .gallery{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
