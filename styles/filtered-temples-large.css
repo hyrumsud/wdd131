@@ -1,0 +1,31 @@
+@media (min-width: 500px) {
+  header {
+    padding: 0.75rem 1.5rem;
+  }
+
+  header > p {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery figure {
+    transition: transform 0.2s ease;
+  }
+
+  .gallery figure:hover {
+    transform: scale(1.02);
+  }
+}
+
