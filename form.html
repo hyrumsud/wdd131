@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NicheAI Payment Form</title>
+  <meta name="author" content="Hyrum Sahyl Isla Hernandez">
+  <meta name="description" content="NicheAI generates real trend-based content ideas in seconds. Enter your niche and instantly get 3 data-backed ideas powered by AI.">
+  <link rel="stylesheet" href="styles/form.css">
+
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+ <main class="form-layout">
+  <div class="container">
+    <h1 class="form-title">Complete Your Subscription</h1>
+
+    <form id="paymentForm">
+      <!-- STEP 1: Name -->
+      <fieldset class="form-step">
+        <legend>User Information</legend>
+
+        <label for="name">Full name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Joseph Smith"
+          required
+        >
+      </fieldset>
+
+      <!-- STEP 2: Emails -->
+      <fieldset class="form-step">
+        <legend>Email</legend>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+        >
+        <span class="input-error" id="email_error"></span>
+
+
+        <label for="confirm_email">Confirm email</label>
+        <input
+          type="email"
+          id="confirm_email"
+          name="confirm_email"
+          placeholder="Confirm your email"
+          required
+        >
+        <span class="input-error" id="confirm_email_error"></span>
+
+
+      </fieldset>
+
+      
+      <fieldset class="form-step">
+        <legend>Password</legend>
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="6"
+          required
+        >
+        <span class="input-error" id="password_error"></span>
+
+        <label for="confirm_password">Confirm password</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          minlength="6"
+          required
+        >
+        <span class="input-error" id="confirm_password_error"></span>
+
+      </fieldset>
+
+      
+      <fieldset class="form-step">
+        <legend>Select Your Plan</legend>
+
+        <label>
+          <input type="radio" id="starter" name="plan" value="starter" checked>
+          Starter Plan – $7/mo
+        </label>
+      </fieldset>
+
+      <!-- STEP 5: Terms -->
+      <fieldset class="form-step">
+        <legend>Terms & Consent</legend>
+
+        <label>
+          <input type="checkbox" id="tos" required>
+          I agree to the <a href="#" target="_blank">Terms of Service</a>.
+        </label>
+        <br><br>
+
+        <label>
+          <input type="checkbox" id="privacy" required>
+          I agree to the <a href="#" target="_blank">Privacy Policy</a>.
+        </label>
+        <br><br>
+
+        <label>
+          <input type="checkbox" id="newsletter">
+          Send me product updates (optional).
+        </label>
+      </fieldset>
+
+      
+      <div class="form-step">
+        <p id="error_message"></p>
+        <button type="submit" id="payButton">
+          Complete Payment
+        </button>
+      </div>
+    </form>
+  </div>
+</main>
+
+  
+  <script src="scripts/form.js"></script>
+</body>
+</html>
