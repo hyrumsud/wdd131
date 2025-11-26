@@ -12,7 +12,6 @@
 
 <body>
 
-  <!-- HEADER con el único h1 -->
   <header>
     <div class="container">
       <h1 class="form-title">Complete Your Subscription</h1>
@@ -22,10 +21,8 @@
   <main class="form-layout">
     <div class="container">
 
-      <!-- Form con method y action que pide el audit -->
       <form id="paymentForm" method="get" action="review.html">
 
-        <!-- STEP 1: Name -->
         <fieldset class="form-step">
           <legend>User Information</legend>
 
@@ -39,7 +36,6 @@
           >
         </fieldset>
 
-        <!-- STEP 2: Emails -->
         <fieldset class="form-step">
           <legend>Email</legend>
 
@@ -64,7 +60,6 @@
           <span class="input-error" id="confirm_email_error"></span>
         </fieldset>
 
-        <!-- STEP 3: Password -->
         <fieldset class="form-step">
           <legend>Password</legend>
 
@@ -89,13 +84,11 @@
           <span class="input-error" id="confirm_password_error"></span>
         </fieldset>
 
-        <!-- SELECT requerido por el audit -->
         <fieldset class="form-step">
           <legend>What are you reviewing?</legend>
 
           <label for="product">Product or feature</label>
           <select id="product" name="product" required>
-            <!-- opción placeholder con disabled + selected -->
             <option value="" disabled selected>Select a Product…</option>
             <option value="ideas">Content Ideas Generator</option>
             <option value="trends">Trends Scanner</option>
@@ -104,7 +97,6 @@
           </select>
         </fieldset>
 
-        <!-- 5 radios requeridos por el audit -->
         <fieldset class="form-step">
           <legend>Rate your experience</legend>
 
@@ -156,7 +148,6 @@
           <label for="rating5">5 - Excellent</label>
         </fieldset>
 
-        <!-- Date input requerido por el audit -->
         <fieldset class="form-step">
           <legend>Usage date</legend>
 
@@ -169,7 +160,6 @@
           >
         </fieldset>
 
-        <!-- textarea requerido -->
         <fieldset class="form-step">
           <legend>Additional feedback</legend>
 
@@ -183,7 +173,6 @@
           ></textarea>
         </fieldset>
 
-        <!-- Plan (checkbox para no sumar más radios) -->
         <fieldset class="form-step">
           <legend>Select Your Plan</legend>
 
@@ -219,7 +208,6 @@
           </label>
         </fieldset>
 
-        <!-- Error general + botón -->
         <div class="form-step">
           <p id="error_message"></p>
           <button type="submit" id="payButton">
