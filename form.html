@@ -7,128 +7,200 @@
   <meta name="author" content="Hyrum Sahyl Isla Hernandez">
   <meta name="description" content="NicheAI generates real trend-based content ideas in seconds. Enter your niche and instantly get 3 data-backed ideas powered by AI.">
   <link rel="stylesheet" href="styles/form.css">
-
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body>
- <main class="form-layout">
-  <div class="container">
-    <h1 class="form-title">Complete Your Subscription</h1>
 
-    <form id="paymentForm">
-      <!-- STEP 1: Name -->
-      <fieldset class="form-step">
-        <legend>User Information</legend>
+  <header>
+    <div class="container">
+      <h1 class="form-title">Complete Your Subscription</h1>
+    </div>
+  </header>
 
-        <label for="name">Full name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Joseph Smith"
-          required
-        >
-      </fieldset>
+  <main class="form-layout">
+    <div class="container">
 
-      <!-- STEP 2: Emails -->
-      <fieldset class="form-step">
-        <legend>Email</legend>
+      <form id="paymentForm" method="get" action="review.html">
 
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="example@email.com"
-          required
-        >
-        <span class="input-error" id="email_error"></span>
+        <fieldset class="form-step">
+          <legend>User Information</legend>
 
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Joseph Smith"
+            required
+          >
+        </fieldset>
 
-        <label for="confirm_email">Confirm email</label>
-        <input
-          type="email"
-          id="confirm_email"
-          name="confirm_email"
-          placeholder="Confirm your email"
-          required
-        >
-        <span class="input-error" id="confirm_email_error"></span>
+        <fieldset class="form-step">
+          <legend>Email</legend>
 
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          >
+          <span class="input-error" id="email_error"></span>
 
-      </fieldset>
+          <label for="confirm_email">Confirm email</label>
+          <input
+            type="email"
+            id="confirm_email"
+            name="confirm_email"
+            placeholder="Confirm your email"
+            required
+          >
+          <span class="input-error" id="confirm_email_error"></span>
+        </fieldset>
 
-      
-      <fieldset class="form-step">
-        <legend>Password</legend>
+        <fieldset class="form-step">
+          <legend>Password</legend>
 
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          minlength="6"
-          required
-        >
-        <span class="input-error" id="password_error"></span>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="6"
+            required
+          >
+          <span class="input-error" id="password_error"></span>
 
-        <label for="confirm_password">Confirm password</label>
-        <input
-          type="password"
-          id="confirm_password"
-          name="confirm_password"
-          minlength="6"
-          required
-        >
-        <span class="input-error" id="confirm_password_error"></span>
+          <label for="confirm_password">Confirm password</label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            minlength="6"
+            required
+          >
+          <span class="input-error" id="confirm_password_error"></span>
+        </fieldset>
 
-      </fieldset>
+        <fieldset class="form-step">
+          <legend>What are you reviewing?</legend>
 
-      
-      <fieldset class="form-step">
-        <legend>Select Your Plan</legend>
+          <label for="product">Product or feature</label>
+          <select id="product" name="product" required>
+            <option value="">Select an option…</option> <!-- placeholder -->
+            <option value="ideas">Content Ideas Generator</option>
+            <option value="trends">Trends Scanner</option>
+            <option value="ui">User Interface</option>
+            <option value="support">Customer Support</option>
+          </select>
+        </fieldset>
 
-        <label>
-          <input type="radio" id="starter" name="plan" value="starter" checked>
-          Starter Plan – $7/mo
-        </label>
-      </fieldset>
+        <fieldset class="form-step">
+          <legend>Rate your experience</legend>
 
-      <!-- STEP 5: Terms -->
-      <fieldset class="form-step">
-        <legend>Terms & Consent</legend>
+          <p>Overall rating:</p>
 
-        <label>
-          <input type="checkbox" id="tos" required>
-          I agree to the <a href="#" target="_blank">Terms of Service</a>.
-        </label>
-        <br><br>
+          <label>
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            1 - Very poor
+          </label>
+          <label>
+            <input type="radio" id="rating2" name="rating" value="2">
+            2 - Poor
+          </label>
+          <label>
+            <input type="radio" id="rating3" name="rating" value="3">
+            3 - Average
+          </label>
+          <label>
+            <input type="radio" id="rating4" name="rating" value="4">
+            4 - Good
+          </label>
+          <label>
+            <input type="radio" id="rating5" name="rating" value="5">
+            5 - Excellent
+          </label>
+        </fieldset>
 
-        <label>
-          <input type="checkbox" id="privacy" required>
-          I agree to the <a href="#" target="_blank">Privacy Policy</a>.
-        </label>
-        <br><br>
+        <fieldset class="form-step">
+          <legend>Usage date</legend>
 
-        <label>
-          <input type="checkbox" id="newsletter">
-          Send me product updates (optional).
-        </label>
-      </fieldset>
+          <label for="usage_date">When did you start using NicheAI?</label>
+          <input
+            type="date"
+            id="usage_date"
+            name="usage_date"
+            required
+          >
+        </fieldset>
 
-      
-      <div class="form-step">
-        <p id="error_message"></p>
-        <button type="submit" id="payButton">
-          Complete Payment
-        </button>
-      </div>
-    </form>
-  </div>
-</main>
+        <fieldset class="form-step">
+          <legend>Additional feedback</legend>
 
-  
+          <label for="comments">Comments (optional)</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            cols="40"
+            placeholder="Tell us anything else about your experience with NicheAI…"
+          ></textarea>
+        </fieldset>
+
+        <fieldset class="form-step">
+          <legend>Select Your Plan</legend>
+
+          <input type="checkbox" id="starter" name="starter" checked>
+          <label for="starter">Starter Plan – $7/mo</label>
+        </fieldset>
+
+        <fieldset class="form-step">
+          <legend>Terms & Consent</legend>
+
+          <input type="checkbox" id="tos" name="tos" required>
+          <label for="tos">
+            I agree to the <a href="#" target="_blank">Terms of Service</a>.
+          </label>
+          <br><br>
+
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">
+            I agree to the <a href="#" target="_blank">Privacy Policy</a>.
+          </label>
+          <br><br>
+
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">
+            Send me product updates (optional).
+          </label>
+          <br><br>
+
+          <input type="checkbox" id="beta" name="beta">
+          <label for="beta">
+            I want to join the NicheAI beta features program.
+          </label>
+        </fieldset>
+
+        <!-- Error general + botón -->
+        <div class="form-step">
+          <p id="error_message"></p>
+          <button type="submit" id="payButton">
+            Complete Payment
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 NicheAI · Product Review Form</p>
+    </div>
+  </footer>
+
   <script src="scripts/form.js"></script>
 </body>
 </html>
